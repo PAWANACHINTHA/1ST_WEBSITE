@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Camputers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#8b5cf6',
+                        dark: '#0f172a',
+                        darker: '#020617',
+                        accent: '#06b6d4'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="bg-darker text-white font-sans antialiased">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-darker/80 backdrop-blur-md border-b border-white/10"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer"
+                    onclick="window.location.href='index.html'">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span
+                        class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-blue-400 to-secondary hover:text-white transition-colors">Camputers</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html"
+                            class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all">Home</a>
+                        <a href="products.html"
+                            class="px-3 py-2 rounded-md text-sm font-medium text-white bg-white/10 hover:bg-white/20 transition-all">Products</a>
+                        <a href="about.html"
+                            class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all">About
+                            Us</a>
+                        <a href="contact.html"
+                            class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all">Contact</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none"
+                        id="mobile-menu-btn">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-darker/95 backdrop-blur-xl border-b border-white/10" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10">Home</a>
+                <a href="products.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white bg-primary/20">Products</a>
+                <a href="about.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10">About
+                    Us</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="pt-32 pb-12 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-down">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Our <span
+                    class="text-primary">Collection</span></h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto">Discover the ultimate gaming machines and professional
+                workstations.</p>
+        </div>
+    </div>
+
+    <!-- Filter & Grid -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+        <!-- Tabs -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up">
+            <button
+                class="px-6 py-2 rounded-full bg-primary text-white font-medium hover:bg-blue-600 transition-colors shadow-lg shadow-blue-500/30">All</button>
+            <button
+                class="px-6 py-2 rounded-full bg-white/5 text-gray-300 font-medium hover:bg-white/10 hover:text-white transition-colors border border-white/10">Gaming
+                PCs</button>
+            <button
+                class="px-6 py-2 rounded-full bg-white/5 text-gray-300 font-medium hover:bg-white/10 hover:text-white transition-colors border border-white/10">Laptops</button>
+            <button
+                class="px-6 py-2 rounded-full bg-white/5 text-gray-300 font-medium hover:bg-white/10 hover:text-white transition-colors border border-white/10">Accessories</button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Product 1 -->
+            <div class="group relative bg-gray-900 rounded-2xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-300"
+                data-aos="fade-up" data-aos-delay="0">
+                <div
+                    class="absolute top-4 left-4 z-10 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                    Bestseller</div>
+                <div class="h-64 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=800&q=80"
+                        alt="PC"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <a href="contact.html"
+                            class="px-6 py-2 bg-white text-darker font-bold rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">View
+                            Details</a>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-white mb-2">Shadow Titan X1</h3>
+                    <p class="text-gray-400 text-sm mb-4">RTX 4090, Intel i9-14900K, 64GB DDR5, 2TB NVMe</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xl font-bold text-primary">LKR 850,000</span>
+                        <button
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="group relative bg-gray-900 rounded-2xl overflow-hidden border border-white/5 hover:border-accent/50 transition-all duration-300"
+                data-aos="fade-up" data-aos-delay="100">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=800&q=80"
+                        alt="PC"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <a href="contact.html"
+                            class="px-6 py-2 bg-white text-darker font-bold rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">View
+                            Details</a>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-white mb-2">Nebula Streamer</h3>
+                    <p class="text-gray-400 text-sm mb-4">RTX 4070, Ryzen 7 7800X3D, 32GB DDR5, 1TB NVMe</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xl font-bold text-accent">LKR 450,000</span>
+                        <button
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="group relative bg-gray-900 rounded-2xl overflow-hidden border border-white/5 hover:border-secondary/50 transition-all duration-300"
+                data-aos="fade-up" data-aos-delay="200">
+                <div
+                    class="absolute top-4 left-4 z-10 bg-secondary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                    New Arrival</div>
+                <div class="h-64 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=800&q=80"
+                        alt="Laptop"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <a href="contact.html"
+                            class="px-6 py-2 bg-white text-darker font-bold rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">View
+                            Details</a>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-white mb-2">Blade Pro 15</h3>
+                    <p class="text-gray-400 text-sm mb-4">RTX 4060, Intel i7-13700H, 16GB DDR5, 240Hz Display</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xl font-bold text-secondary">LKR 380,000</span>
+                        <button
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="group relative bg-gray-900 rounded-2xl overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-300"
+                data-aos="fade-up" data-aos-delay="300">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80"
+                        alt="Monitor"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <a href="contact.html"
+                            class="px-6 py-2 bg-white text-darker font-bold rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">View
+                            Details</a>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-white mb-2">UltraView 4K</h3>
+                    <p class="text-gray-400 text-sm mb-4">27" IPS, 144Hz, 1ms, HDR400</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xl font-bold text-gray-200">LKR 125,000</span>
+                        <button
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/30 transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="group relative bg-gray-900 rounded-2xl overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-300"
+                data-aos="fade-up" data-aos-delay="400">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&w=800&q=80"
+                        alt="Headset"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <a href="contact.html"
+                            class="px-6 py-2 bg-white text-darker font-bold rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">View
+                            Details</a>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-white mb-2">Sonic Pro X</h3>
+                    <p class="text-gray-400 text-sm mb-4">Wireless, 7.1 Surround, Noise Cancelling</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xl font-bold text-gray-200">LKR 35,000</span>
+                        <button
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/30 transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="group relative bg-gray-900 rounded-2xl overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-300"
+                data-aos="fade-up" data-aos-delay="500">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&w=800&q=80"
+                        alt="Keyboard"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <a href="contact.html"
+                            class="px-6 py-2 bg-white text-darker font-bold rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">View
+                            Details</a>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-white mb-2">MechStrike RGB</h3>
+                    <p class="text-gray-400 text-sm mb-4">Mechanical, Red Switches, Per-key RGB</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xl font-bold text-gray-200">LKR 28,000</span>
+                        <button
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/30 transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500">
+            &copy; 2026 Camputers. created for Pawan.
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

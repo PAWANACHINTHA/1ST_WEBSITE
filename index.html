@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camputers - Next Gen Technology</title>
+    <meta name="description" content="Best Computer Shop in Town. Gaming PCs, Laptops, Repairs and more.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#8b5cf6',
+                        dark: '#0f172a',
+                        darker: '#020617',
+                        accent: '#06b6d4'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-darker text-white font-sans antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-darker/80 backdrop-blur-md border-b border-white/10" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+                    <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center animate-pulse-slow">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <span class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-blue-400 to-secondary hover:text-white transition-colors">Camputers</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-white bg-white/10 hover:bg-white/20 transition-all">Home</a>
+                        <a href="products.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all">Products</a>
+                        <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all">About Us</a>
+                        <a href="contact.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all">Contact</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-btn">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-darker/95 backdrop-blur-xl border-b border-white/10" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-primary/20">Home</a>
+                <a href="products.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10">Products</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10">About Us</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=1920&q=80" alt="Gaming Setup" class="w-full h-full object-cover opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-b from-darker via-darker/80 to-darker"></div>
+        </div>
+
+        <!-- Animated Shapes -->
+        <div class="absolute top-20 left-20 w-72 h-72 bg-primary/30 rounded-full blur-[100px] animate-pulse-slow"></div>
+        <div class="absolute bottom-20 right-20 w-96 h-96 bg-secondary/20 rounded-full blur-[120px] animate-pulse-slow" style="animation-delay: 1s;"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
+                <span class="block text-white mb-2">Build Your Dream</span>
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary via-cyan-400 to-secondary">Sleek. Powerful. Ultimate.</span>
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-300 mb-10">
+                Welcome to <span class="text-secondary font-bold">Camputers</span>. We build high-performance custom PCs, offer premium repair services, and provide top-tier tech solutions for Pawan and friends.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="products.html" class="group relative px-8 py-4 bg-primary rounded-full text-white font-bold overflow-hidden shadow-lg shadow-primary/50 hover:shadow-primary/70 transition-all duration-300 hover:-translate-y-1">
+                    <span class="relative z-10">Shop Computers</span>
+                    <div class="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </a>
+                <a href="contact.html" class="px-8 py-4 rounded-full border border-gray-600 text-gray-300 hover:text-white hover:border-white hover:bg-white/5 transition-all duration-300">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+    </div>
+
+    <!-- Featured Categories Section -->
+    <div class="py-24 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-primary font-semibold tracking-wide uppercase text-sm">What We Do</h2>
+                <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">Premium Tech Services</h3>
+                <p class="mt-4 max-w-2xl text-xl text-gray-400 mx-auto">Everything you need to upgrade your digital life.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="relative group bg-white/5 rounded-2xl p-6 border border-white/10 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity"></div>
+                    <div class="relative h-48 w-full mb-6 rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=800&q=80" alt="Custom PC" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Custom Builds</h3>
+                    <p class="text-gray-400 mb-4">Tailor-made gaming and workstation rigs built to your exact specifications with premium cable management.</p>
+                    <a href="products.html" class="text-primary font-medium group-hover:text-secondary transition-colors flex items-center gap-1">Learn more <span>&rarr;</span></a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="relative group bg-white/5 rounded-2xl p-6 border border-white/10 hover:border-accent/50 transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity"></div>
+                    <div class="relative h-48 w-full mb-6 rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80" alt="Laptops" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Laptops & Accessories</h3>
+                    <p class="text-gray-400 mb-4">Latest ultra-books, gaming laptops, and high-end peripherals to complete your setup.</p>
+                    <a href="products.html" class="text-accent font-medium group-hover:text-white transition-colors flex items-center gap-1">Browse Catalog <span>&rarr;</span></a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="relative group bg-white/5 rounded-2xl p-6 border border-white/10 hover:border-secondary/50 transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity"></div>
+                    <div class="relative h-48 w-full mb-6 rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=800&q=80" alt="Repair" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Expert Repairs</h3>
+                    <p class="text-gray-400 mb-4">Fast, reliable diagnostics and repairs for all your hardware and software issues.</p>
+                    <a href="contact.html" class="text-secondary font-medium group-hover:text-primary transition-colors flex items-center gap-1">Get Support <span>&rarr;</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="relative py-20 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900 to-indigo-900 opacity-50"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center" data-aos="zoom-in">
+            <h2 class="text-3xl font-bold text-white mb-4">Ready to upgrade your rig?</h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join the Camputers family today. Experience speed, power, and reliability like never before.</p>
+            <a href="contact.html" class="inline-block px-10 py-5 bg-white text-darker font-bold rounded-full shadow-2xl hover:bg-gray-100 hover:scale-105 transition-all duration-300">
+                Get a Quote Now
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <span class="text-2xl font-bold text-white">Camputers</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">The ultimate destination for custom PCs and tech gear in Sri Lanka.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Services</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-primary transition-colors">Custom Builds</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Laptop Sales</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Hardware Repair</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Company</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.44 1.44 0 112.88 0 1.44 1.44 0 01-2.88 0z"/></svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
+                &copy; 2026 Camputers. Created with ❤️ for Pawan.
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Script for Scroll Animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
